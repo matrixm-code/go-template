@@ -1,0 +1,10 @@
+db:
+  addr: "root:root123@tcp(127.0.0.1:3306)/sample?charset=utf8mb4&parseTime=True&loc=Local"
+
+log:
+  level: debug
+  encode: json
+  outputPaths:
+    - stdout
+  encoderConfig:
+    - stderr
