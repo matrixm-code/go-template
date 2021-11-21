@@ -8,9 +8,9 @@ type DbConfig struct {
 }
 
 type LogConfig struct {
-	Level string `json:"level" yaml:"level"`
-	Development bool `json:"development" yaml:"development"`
-	Encoding string `json:"encoding" yaml:"encoding"`
-	OutputPaths []string `json:"outputPaths" yaml:"outputPaths"`
+	Level            string   `json:"level" yaml:"level"`
+	Development      bool     `json:"development" yaml:"development"`
+	Encoding         string   `json:"encoding" yaml:"encoding"`
+	OutputPaths      []string `json:"outputPaths" yaml:"outputPaths"`
 	ErrorOutputPaths []string `json:"errorOutputPaths" yaml:"errorOutputPaths"`
 }

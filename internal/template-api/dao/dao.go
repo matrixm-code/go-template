@@ -4,21 +4,18 @@ import (
 	"go.uber.org/zap"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"matrix/internal/matrix-api/conf"
+	"matrix/internal/template-api/conf"
 )
 
 
 var dao *Dao
 
 type Dao struct {
+	conf *conf.AppConfig
 	db *gorm.DB
 }
 
-func NewDao(db *gorm.DB) *Dao {
-	return &Dao{db: db}
-}
-
-func Init(c *conf.AppConfig) {
+func NewDao(c *conf.AppConfig) *Dao {
 	db, err := gorm.Open(mysql.Open(c.Db.Addr), &gorm.Config{})
 	if err != nil {
 		zap.S().Fatal("get db error")
@@ -26,10 +23,5 @@ func Init(c *conf.AppConfig) {
 	sqlDb, _ := db.DB()
 	sqlDb.SetMaxIdleConns(c.Db.Idle)
 	sqlDb.SetMaxOpenConns(c.Db.Max)
-
-	dao = NewDao(db)
-}
-
-func GetDao() *Dao {
-	return dao
+	return &Dao{conf: c, db: db}
 }
