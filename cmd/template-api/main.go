@@ -5,16 +5,16 @@ import (
 	"github.com/toolkits/pkg/file"
 	"go.uber.org/zap"
 	"log"
-	"matrix/internal/common/logger"
-	"matrix/internal/template-api/conf"
-	"matrix/internal/template-api/dao"
-	"matrix/internal/template-api/http/controller"
-	"matrix/internal/template-api/logic"
+	"gtemplate/internal/common/logger"
+	"gtemplate/internal/template-api/conf"
+	"gtemplate/internal/template-api/dao"
+	"gtemplate/internal/template-api/http/controller"
+	"gtemplate/internal/template-api/logic"
 	"os"
 	"os/signal"
 	"syscall"
 
-	matrixhttp "matrix/internal/template-api/http"
+	gtemplatehttp "gtemplate/internal/template-api/http"
 )
 
 var (
@@ -43,7 +43,7 @@ func main() {
 	serviceDao := dao.NewDao(appConfig)
 
 	// 初始化validate
-	validator := matrixhttp.NewValidator(appConfig)
+	validator := gtemplatehttp.NewValidator(appConfig)
 
 	// 初始化proxy (默认不添加)
 
@@ -56,7 +56,7 @@ func main() {
 		sampleController,
 	)
 
-	s := matrixhttp.NewHttpServer(appConfig, validator, controller)
+	s := gtemplatehttp.NewHttpServer(appConfig, validator, controller)
 
 	go s.Run()
 	sig := make(chan os.Signal, 1)

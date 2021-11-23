@@ -1,7 +1,7 @@
 package dao
 
 import (
-	"matrix/internal/models"
+	"gtemplate/internal/models"
 )
 
 func (d *Dao)GetSampleList() (samples []models.Sample) {

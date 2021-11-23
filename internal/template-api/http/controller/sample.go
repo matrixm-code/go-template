@@ -2,7 +2,7 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"matrix/internal/template-api/logic"
+	"gtemplate/internal/template-api/logic"
 	"net/http"
 )
 

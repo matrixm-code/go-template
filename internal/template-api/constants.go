@@ -1,4 +1,4 @@
-package matrix_api
+package gtemplate
 
 const (
 	PROJECT = "PROJECT"

@@ -2,8 +2,8 @@ package http
 
 import (
 	"github.com/gin-gonic/gin"
-	"matrix/internal/template-api/conf"
-	"matrix/internal/template-api/http/controller"
+	"gtemplate/internal/template-api/conf"
+	"gtemplate/internal/template-api/http/controller"
 )
 
 type HttpServer struct {

@@ -1,8 +1,8 @@
 package logic
 
 import (
-	"matrix/internal/models"
-	"matrix/internal/template-api/dao"
+	"gtemplate/internal/models"
+	"gtemplate/internal/template-api/dao"
 )
 
 type SampleLogic struct {

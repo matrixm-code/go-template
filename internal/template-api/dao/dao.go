@@ -4,7 +4,7 @@ import (
 	"go.uber.org/zap"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"matrix/internal/template-api/conf"
+	"gtemplate/internal/template-api/conf"
 )
 
 

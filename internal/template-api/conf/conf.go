@@ -6,7 +6,7 @@ import (
 	"github.com/toolkits/pkg/file"
 	"go.uber.org/zap"
 	"log"
-	"matrix/internal/models"
+	"gtemplate/internal/models"
 )
 
 type AppConfig struct {

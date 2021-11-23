@@ -3,7 +3,7 @@ package logger
 import (
 	"go.uber.org/zap"
 	"log"
-	"matrix/internal/models"
+	"gtemplate/internal/models"
 )
 
 /*

@@ -3,8 +3,8 @@ package http
 import (
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-playground/validator/v10"
-	"matrix/internal/template-api/conf"
-	"matrix/tools"
+	"gtemplate/internal/template-api/conf"
+	"gtemplate/tools"
 	"reflect"
 	"regexp"
 	"strings"
