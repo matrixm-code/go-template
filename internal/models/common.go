@@ -6,8 +6,8 @@ import (
 )
 
 type Model struct {
-	ID      uint           `json:"id" gorm:"primarykey"`
-	Dbctime time.Time      `json:"dbctime"`
-	Dbutime time.Time      `json:"dbutime"`
-	Dbdtime gorm.DeletedAt `json:"dbdtime" gorm:"index"`
+	ID        uint           `json:"id" gorm:"primarykey"`
+	CreatedAt time.Time      `gorm:"column:dbctime" json:"dbctime"`
+	UpdatedAt time.Time      `gorm:"column:dbutime" json:"dbutime"`
+	DeletedAt gorm.DeletedAt `gorm:"column:dbdtime" json:"dbdtime" gorm:"index"`
 }
