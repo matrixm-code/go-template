@@ -2,10 +2,13 @@ package http
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/swaggo/files"
+	"github.com/swaggo/gin-swagger"
+	_ "gtemplate/docs"
 )
 
-
 func (h *HttpServer) SetRouter(r *gin.Engine) {
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	noAuth := r.Group("/")
 	{
