@@ -4,6 +4,7 @@
 - **validator - 用于验证传参**
 - viper - 处理配置文件
 - zap - 日志记录
+- swagger - 用作api接口展示
 
 # 目录结构
 
@@ -213,3 +214,15 @@ type SampleLogic struct {
 
 5. 更新logic的构造函数
 6. main函数中定义相关变量. 传入需要的构造函数
+
+### swagger 使用
+> [swag](https://github.com/swaggo/swag/blob/master/README_zh-CN.md) 官方文档
+
+- 本地安装swag 
+```go
+$ go get -u github.com/swaggo/swag/cmd/swag
+# 1.16 及以上版本
+$ go install github.com/swaggo/swag/cmd/swag@latest
+```
+- 在新增controller层添加对应注释
+- 在项目根目录执行 swag init -g cmd/template-api/main.go

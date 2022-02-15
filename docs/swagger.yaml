@@ -1,0 +1,47 @@
+basePath: /
+definitions:
+  models.Sample:
+    properties:
+      dbctime:
+        type: string
+      dbdtime:
+        type: string
+      dbutime:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: lizx@yuanfudao.com
+    name: lizx
+  description: This is a sample server celler server.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Swagger Example API
+  version: "1.0"
+paths:
+  /sample:
+    get:
+      consumes:
+      - application/json
+      description: 一个简单的GET 接口
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sample'
+      summary: sample
+      tags:
+      - example
+securityDefinitions:
+  BasicAuth:
+    type: basic
+swagger: "2.0"

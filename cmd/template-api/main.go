@@ -4,17 +4,16 @@ import (
 	"flag"
 	"github.com/toolkits/pkg/file"
 	"go.uber.org/zap"
-	"log"
 	"gtemplate/internal/common/logger"
 	"gtemplate/internal/template-api/conf"
 	"gtemplate/internal/template-api/dao"
+	gtemplatehttp "gtemplate/internal/template-api/http"
 	"gtemplate/internal/template-api/http/controller"
 	"gtemplate/internal/template-api/logic"
+	"log"
 	"os"
 	"os/signal"
 	"syscall"
-
-	gtemplatehttp "gtemplate/internal/template-api/http"
 )
 
 var (
@@ -30,6 +29,21 @@ func init() {
 	}
 }
 
+// @title           Swagger Example API
+// @version         1.0
+// @description     This is a sample server celler server.
+// @termsOfService  http://swagger.io/terms/
+
+// @contact.name   lizx
+// @contact.email  lizx@yuanfudao.com
+
+// @license.name  Apache 2.0
+// @license.url   http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host      localhost:8080
+// @BasePath  /
+
+// @securityDefinitions.basic  BasicAuth
 func main() {
 	log.Println("start app!!!")
 
